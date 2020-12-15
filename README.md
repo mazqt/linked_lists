@@ -1,0 +1,1 @@
+A short project to create an implementation of Linked Lists in Ruby. Arrays generally fulfill the functions they do, but 1. There are certain advantages pertaining to Linked Lists re large collections of data and 2. Arrays do not fulfill the same functions in other programs than Ruby, hence it's pretty good to get a grasp of them already.
