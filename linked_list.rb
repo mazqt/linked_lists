@@ -38,10 +38,13 @@ class LinkedList
       counter += 1
       current_node = current_node.next
     end
-    puts counter
+    counter
   end
 
   def at(index)
+    size = self.size
+    p size
+    return if index < 0 || index >= size
     counter = 0
     current_node = @head
     while counter != index
@@ -52,7 +55,16 @@ class LinkedList
   end
 
   def pop
+    current_node = @head
+    prev_node = 0
 
+    until current_node == @tail
+      prev_node = current_node
+      current_node = current_node.next
+    end
+
+    prev_node.next = nil
+    @tail = prev_node
   end
 end
 
@@ -64,8 +76,6 @@ l.append("How are you")
 l.append("Doing?")
 l.prepend("2")
 l.prepend("haha")
-l.size
-l.at(4)
-l.at(6)
-l.at(1)
-
+l
+l.pop
+l
